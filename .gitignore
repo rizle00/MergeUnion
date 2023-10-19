@@ -28,3 +28,5 @@ Phone/src/.project
 Phone/.project
 Phone/.classpath
 Phone/.settings/
+/bin/
+*.prefs
