@@ -23,3 +23,10 @@
 hs_err_pid*
 replay_pid*
 /.metadata/
+Phone/src/.classpath
+Phone/src/.project
+Phone/.project
+Phone/.classpath
+Phone/.settings/
+/bin/
+*.prefs
