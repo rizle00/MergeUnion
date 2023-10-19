@@ -1,49 +1,36 @@
 package testPhone3;
 
+import testPhone1.Phone1DAO;
 import testPhone2.Phone2DAO;
 
 public class Phone3DAO extends Phone2DAO {
 	
-
+	Phone1DAO  phone1dao  = new Phone1DAO();
 	
-	@Override
-	public void call(boolean isPower, boolean isCall) {
-		// TODO Auto-generated method stub
-		super.call(isPower, isCall);
-	}
+	
+	Phone3DTO p3dto = new Phone3DTO(null, null, null, null)
 	
 	
 	
-	
-	public void internetOn {
+	public int internetOn() {
 		System.out.println("인터넷 ON");
+		return 1;
 	}
 	
-	public void inernetOff {
+	public void inernetOff() {
 		System.out.println("인터넷 OFF");
 	}
 	
 	
 	public void webtoonApp() {
-		if( )
+		if(internetOn() == 1 ) {
 		System.out.println("웹툰 ON");
-		System.out.println("웹툰 OFF");
-	}
-	
-	public void internetOn {
-		System.out.println("인터넷 ON");
-	}
-	
-	public void inernetOff {
-		System.out.println("인터넷 OFF");
+		}else {
+			System.out.println("웹툰 OFF");
+		}
 	}
 	
 	
-	public void webtoonApp() {
-		if( )
-		System.out.println("웹툰 ON");
-		System.out.println("웹툰 OFF");
-	}
 	
 	
 	
