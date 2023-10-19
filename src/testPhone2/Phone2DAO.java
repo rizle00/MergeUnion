@@ -7,7 +7,9 @@ public class Phone2DAO {
 	Phone2DTO dto = new Phone2DTO();
 
 	public void dmbOff() {
-//		if() {
+		if(dto.button.equals("Off")) {
+			System.out.println("전화기를 종료합니다");
+		}
 	}
 	
 //	public void phonePowerOff() {
