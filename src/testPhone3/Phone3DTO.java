@@ -8,7 +8,6 @@ public class Phone3DTO extends Phone2DTO {
 	
 	
 	public Phone3DTO (String color, String model, String condition, String internetSpeed) {
-		
 		super(color, model, condition);
 		this.internetSpeed = internetSpeed;
 	}
