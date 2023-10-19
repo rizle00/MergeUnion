@@ -37,8 +37,8 @@ public class Phone2DAO {
 			try {
 				dto.button = sc.nextLine();
 				temp = Integer.parseInt(dto.button);
-			}catch (Exception e) {
-				// TODO: handle exception
+			}catch (NumberFormatException e) {
+				System.out.println("숫자를 입력해주세요");
 			}
 		}
 	}
