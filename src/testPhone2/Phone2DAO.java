@@ -9,14 +9,18 @@ public class Phone2DAO extends Phone1DAO{
 	Phone2DTO dto = new Phone2DTO();
 
 	public void dmbOff() {
-		if(dto.button.equals("Off")) {
-			System.out.println("전화기를 종료합니다");
+		if(dto.button.equals("dmb") || dto.button.equals("DMB")) {
+			System.out.println("dmb 를 종료합니다");
 		}
 	}
 	
+	
+	public void checkCall() {
+//		if()
+	}
 //	public void phonePowerOff() {
 //		if (폰 전원 꺼져있을때) {
-//			System.out.println("핸드폰 전원을 켜주세요");
+//			System.out.println("전원이 꺼져있어 DMB방송을 켤수가없습니다.");
 //		}
 //	}
 	public void dmbTurn() {
@@ -24,8 +28,8 @@ public class Phone2DAO extends Phone1DAO{
 			System.out.println("\"dmb\"라고 입력하시면 dmb가 켜집니다.");
 			dto.button = sc.nextLine();
 			if(dto.button.equals("dmb") || dto.button.equals("DMB")) {
-				System.out.println("DMB가 켜집니다.");
-				
+				System.out.println("DMB가 켜집니다. 현재 채널 : 정보없음");
+				dto.channel = dto.button;
 				break;
 			}else {
 				System.out.println("유효한 값이 아닙니다.");
