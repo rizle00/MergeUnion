@@ -1,6 +1,9 @@
 package testPhone2;
 
-public class Phone2DTO {
+import testPhone1.Phone1DTO;
+
+public class Phone2DTO extends Phone1DTO{
 	String button;
 	int channel;
+	String condition;
 }
