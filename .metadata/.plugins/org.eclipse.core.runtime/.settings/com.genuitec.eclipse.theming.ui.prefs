@@ -1,9 +1,11 @@
 applyBackground=false
 approved.defs.file.last.changed.time=1693315978000
+codetogether.announce.displayed=true
 configurationInstallLocation=/D\:/Dev_Tool/eclipse/eclipse/
+ct.reengagement.display.after=1708579308842
 eclipse.preferences.version=1
 iconcolormode=primary
-last.download.attempt.time=1697619413194
-lastConfiguration=1697691706430
+last.download.attempt.time=1697692228434
+lastConfiguration=1697693295631
 newinstall=true
 workbench.theme=Dark Gray
