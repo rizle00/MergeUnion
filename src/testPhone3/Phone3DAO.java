@@ -6,9 +6,7 @@ import testPhone2.Phone2DAO;
 public class Phone3DAO extends Phone2DAO {
 	
 	Phone1DAO  phone1dao  = new Phone1DAO();
-	
-	
-	Phone3DTO p3dto = new Phone3DTO(null, null, null, null)
+	Phone3DTO phone3dto = new Phone3DTO(null, null, null, null);
 	
 	
 	
