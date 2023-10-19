@@ -6,7 +6,6 @@ public class Phone1Main {
 		Phone1DTO dto = new Phone1DTO();
 		dao.setPhone();
 		dao.Phone();
-		
 	}
 	
 }

@@ -21,7 +21,7 @@ public class Phone1DAO {
 	}
 	public void PowerOn(boolean isPower) {
 		
-		System.out.println("모델명: "+dto.getModel()+"색상 :"+dto.getColor());
+		System.out.println("모델명: "+dto.getModel()+"색상 :"+dto.getColor()+"전원:"+isPower);
 		if(isPower==false) {
 			System.out.println("전원이 켜집니다");
 			dto.isPower =true;
@@ -35,12 +35,11 @@ public class Phone1DAO {
 		} 
 	}
 	public void call(boolean isCall) {
-		while(true) {
+		while(dto.isPower) {
 		if(isCall==false) {
 			System.out.println("전화가 옵니다");
 			dto.isCall = true;
 			answer();
-			
 			transmit();
 			receive();
 			hangUp();
@@ -63,11 +62,11 @@ public class Phone1DAO {
 	
 	public void transmit() {
 		System.out.println("통화합니다");
-		sc.nextLine();
+		System.out.println("나: "+sc.nextLine());
 	}
 	
 	public void receive() {
 		System.out.println("상대방이 말합니다");
-		sc.nextLine();
+		System.out.println("상대방: "+sc.nextLine());
 	}
 }
