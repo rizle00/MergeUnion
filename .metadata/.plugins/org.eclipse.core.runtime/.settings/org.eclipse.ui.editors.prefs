@@ -1,12 +1,14 @@
-AbstractTextEditor.Color.Background=25,29,31
 AbstractTextEditor.Color.Background.SystemDefault=false
+<<<<<<< HEAD
 AbstractTextEditor.Color.FindScope=29,116,150
 AbstractTextEditor.Color.Foreground=193,200,205
 AbstractTextEditor.Color.Foreground.SystemDefault=false
 AbstractTextEditor.Color.SelectionBackground=26,95,140
+=======
+>>>>>>> TG
 AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
-AbstractTextEditor.Color.SelectionForeground=146,157,165
 AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
+<<<<<<< HEAD
 LSP4EReadOccurrenceIndicationColor=26,95,140
 LSP4ETextOccurrenceIndicationColor=26,95,140
 LSP4EWriteOccurrenceIndicationColor=26,95,140
@@ -46,3 +48,6 @@ searchResultTextStyle=BOX
 secondaryIPColor=44,49,53
 spellingIndicationColor=253,170,211
 writeOccurrenceIndicationColor=65,65,4
+=======
+eclipse.preferences.version=1
+>>>>>>> TG

@@ -1,5 +1,13 @@
 package testPhone3;
 
-public class Phone3DAO {
+import testPhone2.Phone2DAO;
 
+public class Phone3DAO extends Phone2DAO {
+	
+
+	
+	
+	
+	
+	
 }
