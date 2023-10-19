@@ -9,8 +9,9 @@ public class Phone2DAO extends Phone1DAO{
 	Phone2DTO dto = new Phone2DTO();
 	
 	public void phone_Initial2() {
-		System.out.println("2세대 폰 ( 색상:검정 , 모델명:이니셜-2, 상태:종료 채널:정보없음 ) 가 지급 되었습니다. (1세대 폰 모든 기능을 점검)");
+		System.out.println("2세대 폰  ( " + dto.getColor() + dto. +") 가 지급 되었습니다. (1세대 폰 모든 기능을 점검)");
 		System.out.println("버튼을 눌러주세요 (dmb - \"dmb\"입력" );
+		dto.button = sc.nextLine();
 	}
 	
 	public void dmbOff() {
