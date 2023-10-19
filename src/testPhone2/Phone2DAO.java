@@ -2,7 +2,9 @@ package testPhone2;
 
 import java.util.Scanner;
 
-public class Phone2DAO {
+import testPhone1.Phone1DAO;
+
+public class Phone2DAO extends Phone1DAO{
 	Scanner sc = new Scanner(System.in);
 	Phone2DTO dto = new Phone2DTO();
 
