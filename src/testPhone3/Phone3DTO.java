@@ -1,6 +1,8 @@
 package testPhone3;
 
-public class Phone3DTO{
+import testPhone2.Phone2DTO;
+
+public class Phone3DTO extends Phone2DTO {
 
 	public String internetSpeed;
 	
