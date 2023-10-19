@@ -5,12 +5,23 @@ import java.util.Scanner;
 public class Phone1DAO {
 	Phone1DTO dto = new Phone1DTO();
 	Scanner sc = new Scanner(System.in);
-	public void setPhone(String model, String color) {
-		dto.model = model;
-		dto.color = color;
+	public void setPhone() {
+		System.out.println("모델명과 색상을 선택하세요");
+		
+		dto.setModel(sc.nextLine());
+		dto.setColor(sc.nextLine()); 
 	}
 	
+	public void Phone() {
+		PowerOn(dto.isPower);
+		while(dto.isPower) {
+			call(dto.isCall);
+			PowerOff(dto.isPower);
+		}
+	}
 	public void PowerOn(boolean isPower) {
+		
+		System.out.println("모델명: "+dto.getModel()+"색상 :"+dto.getColor());
 		if(isPower==false) {
 			System.out.println("전원이 켜집니다");
 			dto.isPower =true;
@@ -21,27 +32,33 @@ public class Phone1DAO {
 		if(isPower==true) {
 			System.out.println("전원이 꺼집니다");
 			dto.isPower =false;
-		}
+		} 
 	}
-	public void call(boolean isPower, boolean isCall) {
-		if(isPower==true && isCall==false) {
+	public void call(boolean isCall) {
+		while(true) {
+		if(isCall==false) {
 			System.out.println("전화가 옵니다");
 			dto.isCall = true;
-		} else if(isPower==true && isCall == true) {
+			answer();
+			
+			transmit();
+			receive();
+			hangUp();
+			break;
+		} else if(isCall == true) {
 			System.out.println("통화중입니다");
 		}
-	}
-	public void answer(boolean isCall) {
-		if(isCall==true) {
-			System.out.println("전화를 받습니다");
 		}
+	}
+	public void answer() {
+		
+			System.out.println("전화를 받습니다");
+		
 	}
 	
-	public void hangUp(boolean isCall) {
-		if(isCall==true) {
+	public void hangUp() {
 			System.out.println("통화를 종료합니다");
 			dto.isCall = false;
-		}
 	}
 	
 	public void transmit() {
