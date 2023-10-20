@@ -7,7 +7,6 @@ import testPhone1.Phone1DAO;
 public class Phone2DAO extends Phone1DAO {
 	Scanner sc = new Scanner(System.in);
 	Phone2DTO dto = new Phone2DTO();
-	boolean check;
 
 	public void init(Phone2DTO dto) {
 		this.dto = dto;
@@ -20,9 +19,9 @@ public class Phone2DAO extends Phone1DAO {
 		init(dto);
 		Phone();
 		PowerOn(dto.isPower);
-		this.check = dto.isPower;
+		this.dto.condition = dto.isPower;
 		
-		System.out.println(check);
+		System.out.println(dto.condition);
 		mainScreen();
 //		if (dto.button.equals("On")) {
 //			System.out.println("이니셜-2가 켜졌습니다.");
@@ -61,7 +60,7 @@ public class Phone2DAO extends Phone1DAO {
 	}
 
 	public void button() {
-		while (check) {
+		while (dto.condition) {
 			dto.button = sc.nextLine();
 			if (dto.button.equals("전원끄기")) {
 				PowerOff(dto.isPower);
@@ -74,7 +73,7 @@ public class Phone2DAO extends Phone1DAO {
 	}
 
 	public void dmbTurn() {
-		while (check) {
+		while (dto.condition) {
 			if (dto.button.equals("dmb") || dto.button.equals("DMB")) {
 				System.out.println("DMB가 켜집니다. 현재 채널 : 정보없음");
 				dto.channel = "정보없음";
@@ -102,7 +101,7 @@ public class Phone2DAO extends Phone1DAO {
 	public void dmbChannel() {
 		String temp;
 		System.out.println("DMB 채널을 입력해주세요");
-		while (check) {
+		while (dto.condition) {
 			try {
 				temp = sc.nextLine();
 				if (temp.equals("off") || temp.equals("OFF")) {
