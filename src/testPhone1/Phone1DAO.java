@@ -19,20 +19,22 @@ public class Phone1DAO {
 			PowerOff(dto.isPower);
 		}
 	}
-	public void PowerOn(boolean isPower) {
+	public boolean PowerOn(boolean isPower) {
 		
 		System.out.println("모델명: "+dto.getModel()+"색상 :"+dto.getColor()+"전원:"+isPower);
 		if(isPower==false) {
 			System.out.println("전원이 켜집니다");
 			dto.isPower =true;
-		}
+			return isPower;
+		}return isPower;
 	}
 	
-	public void PowerOff(boolean isPower) {
+	public boolean PowerOff(boolean isPower) {
 		if(isPower==true) {
 			System.out.println("전원이 꺼집니다");
 			dto.isPower =false;
-		} 
+			return isPower;
+		} return isPower;
 	}
 	public void call(boolean isCall) {
 		while(dto.isPower) {
@@ -45,7 +47,7 @@ public class Phone1DAO {
 			hangUp();
 			break;
 		} else if(isCall == true) {
-			System.out.println("통화중입니다");
+			System.out.println("통화중 입니다");
 		}
 		}
 	}
