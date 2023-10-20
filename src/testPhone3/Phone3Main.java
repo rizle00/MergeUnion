@@ -14,7 +14,7 @@ public class Phone3Main extends Phone2Main {
 		
 		Phone3DAO phone3dao = new Phone3DAO();
 		
-		phone3dao.PowerOn(false);
+//		phone3dao.PowerOn(false);
 		phone3dao.webtoonApp();
 		
 		

@@ -5,11 +5,11 @@ import testPhone2.Phone2DTO;
 public class Phone3DTO extends Phone2DTO {
 
 
-	public Phone3DTO() {
-		// TODO Auto-generated constructor stub
-	}
-	public String internetSpeed, condition;
-	public int channel;
+//	public Phone3DTO() {
+//		// TODO Auto-generated constructor stub
+//	}
+//	public String internetSpeed, condition;
+//	public int channel;
 	public int onf;
 	int opt;
 	
