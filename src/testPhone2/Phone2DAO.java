@@ -13,13 +13,14 @@ public class Phone2DAO extends Phone1DAO {
 		this.dto = dto;
 	}
 
-	public void phone_Initial2() {
+	public void phone_Initial2() {//시작
 		System.out.println("2세대 폰  ( " + dto.color + dto.model +") 가 지급 되었습니다. (1세대 폰 모든 기능을 점검)");
 		Phone2DTO dto = new Phone2DTO();
 		setPhone();
 		init(dto);
 		Phone();
-		this.check = true;
+		PowerOn(dto.isPower);
+		this.check = dto.isPower;
 		
 		System.out.println(check);
 		mainScreen();
@@ -29,18 +30,28 @@ public class Phone2DAO extends Phone1DAO {
 //		}
 	}
 //	
-//	@Override
-//	public void PowerOn(boolean isPower) {
-//		System.out.println("모델명: "+dto.getModel()+"색상 :"+dto.getColor()+"전원:"+isPower);
-//		if(isPower==false) {
-//			System.out.println("전원이 켜집니다");
-//			dto.isPower =true;
-//		}
-//	}
+	@Override
+	public boolean PowerOn(boolean isPower) {
+		
+		if(isPower==false) {
+			System.out.println("전원이 켜집니다");
+			dto.isPower =true;
+			return isPower;
+		}return isPower;
+	}
+	
+	@Override
+	public boolean PowerOff(boolean isPower) {
+		if(isPower==true) {
+			System.out.println("전원이 꺼집니다");
+			dto.isPower =false;
+			return isPower;
+		} return isPower;
+	}
 
 	public void mainScreen() {
 		System.out.println("버튼을 눌러주세요 (dmb - \"dmb\"입력)");
-		button();
+		button();// 전원끄기 or dmb 
 	}
 
 	public void dmbOff() {
@@ -53,9 +64,7 @@ public class Phone2DAO extends Phone1DAO {
 		while (check) {
 			dto.button = sc.nextLine();
 			if (dto.button.equals("전원끄기")) {
-				System.out.println("전원이 꺼집니다.");
-				
-				this.check = false;
+				PowerOff(dto.isPower);
 			} else if (dto.button.equals("dmb")) {
 				dmbTurn();
 			}else {
@@ -101,6 +110,10 @@ public class Phone2DAO extends Phone1DAO {
 					mainScreen();
 					break;
 				}
+				int temp2 = Integer.parseInt(temp);
+				
+				
+				
 			} catch (NumberFormatException e) {
 				System.out.println("숫자를 입력해주세요");
 				continue;

@@ -8,7 +8,7 @@ public class Phone2DTO extends Phone1DTO{
 	public void name(String color, String model) {
 		this.setColor(color);
 		this.setModel(model);
-		super.isPower=  true;
+		
 		
 	}
 	
