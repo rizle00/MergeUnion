@@ -3,8 +3,8 @@ package testPhone1;
 import java.util.Scanner;
 
 public class Phone1DAO {
-	Phone1DTO dto = new Phone1DTO();
-	Scanner sc = new Scanner(System.in);
+	Phone1DTO dto = new Phone1DTO(); //  초기화 되버림
+	public Scanner sc = new Scanner(System.in);
 	public void setPhone() {
 		System.out.println("모델명과 색상을 선택하세요");
 		
@@ -25,7 +25,7 @@ public class Phone1DAO {
 		if(isPower==false) {
 			System.out.println("전원이 켜집니다");
 			dto.isPower =true;
-			return isPower;
+			return dto.isPower;
 		}return isPower;
 	}
 	
