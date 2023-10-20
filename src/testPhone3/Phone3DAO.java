@@ -34,8 +34,10 @@ public class Phone3DAO extends Phone2DAO {
 	
 	
 	public void webtoonApp() {
+		
+	if(internetOn(dto.onf) == 1 ) {
 		System.out.println("웹툰앱을 실행하시겠습니까? 1.On 2.Off");
-		if(internetOn(dto.onf) == 1 ) {
+		 = Integer.parseInt(sc.nextLine());
 		System.out.println("웹툰 ON");
 		}else {
 			System.out.println("웹툰 OFF");
