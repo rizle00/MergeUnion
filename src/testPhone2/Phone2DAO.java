@@ -53,7 +53,8 @@ public class Phone2DAO extends Phone1DAO {
 		while (check) {
 			dto.button = sc.nextLine();
 			if (dto.button.equals("전원끄기")) {
-				System.out.println("전원이 꺼집니다");
+				System.out.println("전원이 꺼집니다.");
+				
 				this.check = false;
 			} else if (dto.button.equals("dmb")) {
 				dmbTurn();

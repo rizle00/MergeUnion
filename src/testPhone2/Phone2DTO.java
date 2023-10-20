@@ -9,6 +9,7 @@ public class Phone2DTO extends Phone1DTO{
 		this.setColor(color);
 		this.setModel(model);
 		super.isPower=  true;
-
+		
 	}
+	
 }
