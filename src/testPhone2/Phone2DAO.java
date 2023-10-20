@@ -14,11 +14,12 @@ public class Phone2DAO extends Phone1DAO {
 	}
 
 	public void phone_Initial2() {
-		System.out.println("2세대 폰  ( " + dto.color + dto.model + ") 가 지급 되었습니다. (1세대 폰 모든 기능을 점검)");
+		System.out.println("2세대 폰  ( " + dto.color + dto.model +") 가 지급 되었습니다. (1세대 폰 모든 기능을 점검)");
 		Phone2DTO dto = new Phone2DTO();
+		setPhone();
 		init(dto);
 		Phone();
-		this.check = PowerOn(false);
+		this.check = true;
 		
 		System.out.println(check);
 		mainScreen();
@@ -52,9 +53,12 @@ public class Phone2DAO extends Phone1DAO {
 		while (check) {
 			dto.button = sc.nextLine();
 			if (dto.button.equals("전원끄기")) {
-				this.check = PowerOff(true);
+				System.out.println("전원이 꺼집니다");
+				this.check = false;
 			} else if (dto.button.equals("dmb")) {
 				dmbTurn();
+			}else {
+				
 			}
 		}
 	}
@@ -68,9 +72,16 @@ public class Phone2DAO extends Phone1DAO {
 				dmbChannel();
 				break;
 			} else {
-				System.out.println("유효한 값이 아닙니다.");
-				button();
-				continue;
+				try {
+					int temp = Integer.parseInt(dto.button);
+					
+				}
+				catch (NumberFormatException e) {
+					System.out.println("유효한 값이 아닙니다.");
+					button();
+					continue;	
+				}
+				
 			}
 		}
 	}
@@ -83,20 +94,19 @@ public class Phone2DAO extends Phone1DAO {
 		System.out.println("DMB 채널을 입력해주세요");
 		while (check) {
 			try {
-				button();
-				if (dto.button.equals("off") || dto.button.equals("OFF")) {
+				temp = sc.nextLine();
+				if (temp.equals("off") || temp.equals("OFF")) {
 					System.out.println("DMB가 종료됩니다.");
 					mainScreen();
 					break;
 				}
-				temp = dto.button;
 			} catch (NumberFormatException e) {
 				System.out.println("숫자를 입력해주세요");
 				continue;
 			}
 			System.out.println("DMB방송의 채널을 변경합니다");
-			System.out.println(dto.channel + "=>" + dto.button + "로 채널을 변경합니다 ");
-			dto.channel = dto.button;
+			System.out.println(dto.channel + "=>" + temp + "로 채널을 변경합니다 ");
+			dto.channel = temp;
 
 		}
 	}
