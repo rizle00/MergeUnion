@@ -49,7 +49,7 @@ public class Phone2DAO extends Phone1DAO {
 	}
 
 	public void mainScreen() {
-		System.out.println("버튼을 눌러주세요 (dmb - \"dmb\"입력)");
+		System.out.println("버튼을 눌러주세요 (dmb - \"dmb\"입력) ||  \"전원끄기\" - 핸드폰 끄기" );
 		button();// 전원끄기 or dmb 
 	}
 
